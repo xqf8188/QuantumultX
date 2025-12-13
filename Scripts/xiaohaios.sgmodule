@@ -1,0 +1,13 @@
+#!name=哈士奇应用签到
+#!desc=哈士奇应用(xiaohaios.com)自动签到模块，支持Cookie抓取和每日自动签到
+#!system=ios
+
+[Script]
+# Cookie获取脚本 - 访问xiaohaios.com时自动抓取Cookie
+哈士奇Cookie = type=http-request,pattern=^https:\/\/www\.xiaohaios\.com,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/Scripts/xiaohaios_cookie.js
+
+# 自动签到脚本 - 每天9:00自动执行（可修改时间）
+哈士奇签到 = type=cron,cronexp="0 9 * * *",wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/Scripts/xiaohaios_checkin.js
+
+[MITM]
+hostname = %APPEND% www.xiaohaios.com

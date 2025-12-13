@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+*~
+.project
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Node modules (if any scripts use npm)
+node_modules/
+package-lock.json
+
+# System files
+*.pyc
+__pycache__/
